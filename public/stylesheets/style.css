@@ -1,8 +1,369 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
 }
 
-a {
-  color: #00B7FF;
+:root{
+  --amarillo: rgb(253, 249, 192);
+  --crema: rgb(245, 233, 250);
+  --fuente-footer: rgb(39, 54, 73);
+}
+
+body{
+  background-color: var(--crema);
+  font-family: cursive;
+}
+
+
+/* ###################################################### */
+/* CABECERA */
+
+.cabecera{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--gris);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 2px solid var(--amarillo);
+}
+
+.logo{
+  display: flex;
+  justify-content: start;
+  width: 75%;
+  background-color: var(--crema);
+}
+
+.logo img{
+  display: flex;
+  text-align: center;
+  width: 200px;
+}
+
+.botones{
+  display: flex;
+  justify-content: space-between;    
+  width: 100%;
+  font-size: 150%;
+}
+
+.boton-menu{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.submenu-beba{
+  display: none;
+  background-color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 4%;
+  list-style: none;
+  width: 100%;
+  
+}
+.submenu-bebe{
+  display: none;
+  background-color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 4%;
+  list-style: none;
+  width: 100%;
+
+}
+.submenu-nino{
+  display: none;
+  background-color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 4%;
+  list-style: none;
+  width: 100%;
+
+}
+.submenu-nina{
+  display: none;
+  background-color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 4%;
+  list-style: none;
+  width: 100%;
+
+}
+.detalle a{
+  text-decoration: none;
+}
+
+.navegador-beba:hover >.submenu-beba{
+  display: block;
+  position: fixed;
+  top: 57px;
+  left: 0;
+}
+.navegador-bebe:hover >.submenu-bebe{
+  display: block;
+  position: fixed;
+  top: 57px;
+  left: 0;
+}
+.navegador-nino:hover >.submenu-nino{
+  display: block;
+  position: fixed;
+  top: 57px;
+  left: 0;
+}
+.navegador-nina:hover >.submenu-nina{
+  display: block;
+  position: fixed;
+  top: 57px;
+  left: 0;
+}
+
+
+.enlases{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.iconos{
+  max-width: 40px;
+  padding: 3px;
+}
+
+.iconos-ubicacion img:hover{
+  transform: rotate(0.1turn);
+}
+
+/* ############################################################### */
+/* SLIDER DE IMAGENES */
+
+.imagenes{
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  overflow: hidden;
+}
+
+.imagenes ul{
+  width: 200%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1%;
+  animation: slider 10s infinite alternate;
+  list-style: none;
+}
+
+@keyframes slider{
+  0%{margin-left: 0;}
+  45%{margin-left: 0;}
+
+  50%{margin-left: -100%;}
+  100%{margin-left: -100%;}
+}
+
+.imagenes img{
+  width: 100%;
+  box-shadow: 5px 10px 15px var(--fuente-footer);
+}
+
+
+
+/* ############################################################### */
+/* BOTON CELU */
+
+
+.escondido{
+  display: none;
+}
+
+
+
+/* ################################################### */
+/* NOVEDADES */
+
+
+.novedades{
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.novedades img{
+  border: 2px solid red;
+  width: 100%;
+}
+
+
+/* ################################################## */
+/* PIE DE PAGINA */
+
+footer{
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+footer h2{
+  font-family: cursive ;
+  font-size: 125%;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+.pieses{
+  display: flex;
+  justify-content: space-around;
+  background-image: url(imagenes/niña-detras.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 3%;
+  font-weight: bold;
+}
+
+.suscripcion{
+  color: var(--fuente-footer);
+  font-weight: bold;
+}
+
+.pie a{
+  color: var(--fuente-footer);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.enviar-borrar input{
+  /* display: flex; */
+  width: 48%;
+  border: 1px solid gray;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+
+
+.boton-menu:hover,.iconos:hover{
+  background-color: rgb(245, 242, 247);
+  border-radius: 10px;
+  color: var(--fuente-footer);
+  transform: scale(1.2);
+  border: 1px solid var(--amarillo);
+  box-shadow: 6px 3px 5px rgb(156, 156, 156);
+}
+
+.pie a:hover{
+  border-radius: 10px;
+  color: black;
+  transform: scale(1.2);
+  text-shadow: 6px 3px 2px rgb(173, 173, 173);
+}
+
+
+
+/* ######################################################### */
+/* MEDIAS */
+
+@media (max-width: 750px){    
+  .botones{
+      display: flex;
+      justify-content: space-around; 
+      padding-right: 5px;   
+      padding-left: 5px;    
+  }
+
+  .enlases{
+      display: none;
+  }
+  
+  .cabecera{
+     
+      display: flex;
+      justify-content: flex-start;
+      height: 100%;
+  }   
+}
+
+@media (max-width: 500px){    
+  .menu{
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+  }
+  
+  .logo{
+      padding-bottom: 5%;
+  }
+
+  .logo img{
+      display: flex;
+      justify-content: center;
+      width: 100%;        
+  }
+}
+@media (max-width: 500px){
+  .cabecera{
+      display: flex;
+      flex-direction: column;
+  }
+  
+
+  .escondido{
+      display: block;
+      text-align: center;
+  }
+
+  .escondido img{
+      width: 12%;
+  }
+ 
+  footer{
+      font-size: 70%;
+  }
+  .botones-footer{
+      font-size: 70%;
+  }
+  .botones{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      padding-left: 10px;
+      padding-right: 10px;     
+  }
+  
+  .boton-menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }   
+  
+  .pieses{
+      flex-direction: column;
+      justify-content: center;
+  }
 }
