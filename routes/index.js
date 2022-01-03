@@ -16,7 +16,7 @@ router.get('/registro' ,  (req, res) => {
 router.get('/prendas', async (req, res) => {
   /*llamo a la funcion getPrendas*/
   const prendas = await api.getPrenda();
-  res.send(prendas);
+  res.render('pages/prendas', {prendas});
 });
 
 module.exports = router;
