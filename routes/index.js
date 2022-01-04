@@ -13,10 +13,10 @@ router.get('/registro' ,  (req, res) => {
   res.render('pages/registro', { title: 'Cuenta' });
 });
 
-router.get('/prendas', async (req, res) => {
+router.get('/buscar', async (req, res) => {
   /*llamo a la funcion getPrendas*/
   const prendas = await api.getPrenda();
-  res.render('pages/prendas', {prendas});
+  res.render('pages/buscar', {prendas});
 });
 
 module.exports = router;
