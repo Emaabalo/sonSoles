@@ -1,10 +1,12 @@
-<ul class="prendasTodas">
-    <% prendas.forEach(prendas => { %>
-        <li class="lista_item">
-            <a href= "<%= prendas.idPrenda %>">
-                <img src= "<%= prendas.imagen %>" alt="" class="imagen">
-                <h2 class="precio"> $ <%= prendas.precio %> </h2>
-            </a>
-        </li> 
-    <% }) %>
-</ul>
+<div class="baul">
+    <ul class="prendasTodas">
+        <% prendas.forEach(prendas => { %>
+            <li class="lista_item">
+                <a href= "<%= prendas.idPrenda %>" class="prendas">
+                    <img src= "<%= prendas.imagen %>" alt="" class="imagen">
+                    <h2 class="precio"> $ <%= prendas.precio %> </h2>
+                </a>
+            </li> 
+        <% }) %>
+    </ul>
+</div>
