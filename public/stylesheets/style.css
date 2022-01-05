@@ -161,6 +161,7 @@ body{
 }
 
 .imagenes ul{
+  padding-top: 25px;
   width: 200%;
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -230,7 +231,7 @@ footer h2{
 .pieses{
   display: flex;
   justify-content: space-around;
-  background-image: url(imagenes/niña-detras.png);
+  background-image: url(https://raw.githubusercontent.com/Emaabalo/sonSoles/main/public/images/ni%C3%B1a-detras.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 3%;
@@ -370,17 +371,24 @@ footer h2{
 
 /* ################################  PRENDAS  ################################### */
 
+.baul {
+  padding-bottom: 15%;
+  margin: 0 auto;
+  max-width: 95%;
+  max-height: 700px;
+  border: solid rgb(173, 136, 136) 1px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
-.prendasTodas {
-    display: flex;
-    align-content: center;
-    padding: 3%;
-    margin: 3%;
-    width: 25%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 5%;
-    list-style: none;
+.prendasTodas {  
+  padding: 3%;
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5%;
+  list-style: none;
 }
 
 .prendas {
@@ -388,16 +396,18 @@ footer h2{
 }
 
 .imagen {
+  width: 100%;
   border-radius: 5%;
   box-shadow: 5px 10px 15px var(--fuente-footer);
 }
 
-.baul {
-  max-width: 95%;
-  border: solid black 3px;
+.imagen:hover {
+  transform: scale(1.01);
 }
 
 .precio {
-  color: black;
+  text-align: center;
+  padding-bottom: 15px;
+  color: rgb(104, 102, 102);
   text-decoration: none;
 }

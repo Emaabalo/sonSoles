@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         imagen: DataTypes.STRING(2000),
         precio: DataTypes.INTEGER(6)
     },
-        {
-            freezeTableName: true,
-            timestamps: false
-        });
+    {
+        freezeTableName: true,
+        timestamps: false
+    });
     return ropa;
-}
+};

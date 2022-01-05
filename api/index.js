@@ -1,5 +1,5 @@
-const req = require("express/lib/request");
-const { Op } = require("sequelize");
+const req = require('express/lib/request');
+const { Op } = require('sequelize');
 // Traer la db
 const db = require('../models');
 
@@ -12,11 +12,11 @@ const getPrenda = async() => {
     const prendas = await db.ropa.findAll().then(result => {
         return result;
     });
-return prendas;
-console.log('que onda???', prendas);
+    return prendas;
+    console.log('que onda???', prendas);
 //la funcion devuelve la variable prenda que es un json
 // La devolucion del findAll se guarda en prenda y eso se retorna con result
 //findAll ejecuta un select en la base de datos. el then lo espera a que termine 
-}
+};
 
-module.exports = { getPrenda }
+module.exports = { getPrenda };
