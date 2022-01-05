@@ -19,4 +19,22 @@ const getPrenda = async() => {
 //findAll ejecuta un select en la base de datos. el then lo espera a que termine 
 };
 
-module.exports = { getPrenda };
+const searchByFiltro = async (pilcha) => {
+    //op.substring toma una cadena y le agrega %
+    console.log(pilcha);
+    const resultados = await db.ropa.findAll({
+        where:{
+            tipoPrenda:{
+                [Op.substring]: pilcha
+            } 
+        }
+    }).then(result => {
+        return result;
+    });
+    return resultados;
+}
+
+module.exports = {
+    getPrenda,
+    searchByFiltro
+};

@@ -19,4 +19,18 @@ router.get('/buscar', async (req, res) => {
     res.render('pages/buscar', {prendas});
 });
 
+
+router.get('/filtrar',async (req, res) => {
+    // Conseguir lo que el usuario tipeó en el campo "pilcha"
+    // const pilcha = req.query.titulo;
+    const {pilcha} = req.query;
+  
+    // Enviar pilcha a la llamada de la API
+  
+    const results = await api.searchByFiltro(pilcha);
+  
+    res.send(results);
+  });
+
+
 module.exports = router;
