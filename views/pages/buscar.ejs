@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Son Soles</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <header>
-      <%- include('../partials/nav.ejs') %>
-    </header>
 
-    <main>
-      <%- include('../partials/filtros.ejs') %>        
-      <%- include('../partials/prendas.ejs') %>
-      <%- include('../partials/vidriera.ejs') %>
-    </main>
+<head>
+  <title>Son Soles</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
 
-    <section>
-      <%- include('../partials/novedades.ejs') %>
-    </section>
+<body>
+  <header>
+    <%- include('../partials/nav.ejs') %>
+  </header>
 
-    <footer>
-      <%- include('../partials/footer.ejs') %>
-    </footer>
+  <main>
+    <%- include('../partials/filtros.ejs') %>
 
-  </body>
+    <div class="baul">
+      <ul class="prendasTodas">
+        <% results.forEach(results=> { %>
+          <li class="lista_item">
+            <a href="<%= results.idPrenda %>" class="prendas">
+              <img src="<%= results.imagen %>" alt="" class="imagen">
+              <h2 class="precio"> $ <%= results.precio %> </h2>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+
+    <%- include('../partials/vidriera.ejs') %>
+  </main>
+
+  <section>
+    <%- include('../partials/novedades.ejs') %>
+  </section>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+
+</body>
+
 </html>

@@ -411,3 +411,34 @@ footer h2{
   color: rgb(104, 102, 102);
   text-decoration: none;
 }
+
+
+/* ##########################   FORMULARIO PARA BUSCAR   #################### */
+
+.formBuscar{
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-right: 50px;
+  margin: 1% auto;
+  display: flex;
+  text-align: center;
+
+  justify-content: end;
+  background-color: rgb(203, 250, 128);
+}
+
+.botonBuscar{
+  margin: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  background-color: rgb(253, 253, 90);
+  cursor: pointer;
+  border: solid 2px rgb(155, 153, 153);
+  border-radius: 3px;
+}
+
+.inputPilcha{
+  width: 300px;
+}

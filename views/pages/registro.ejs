@@ -10,43 +10,29 @@
 <body>
     <%- include('../partials/nav.ejs') %>
 
-    <h1>LOGIN</h1>
-    <div class="usuario">
-        <div class="login">
-            <h2>Ya soy cliente</h2>
-            <p>Ingresa con tu mail y tu clave</p>
-        
-            <form action="usuario">
-                <div class="formulario">
-                    <p>Email: </p><input type="email">
-                    <p>Contaseña: </p><input type="contraseña">
-                </div>
-        
-                <div class="enviar-borrar">
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Borrar">
-                </div>
-            </form>
-        </div>
+    <div class="suscripcion">
+        <h1>SUSCRIBITE</h1>
+        <form action="/registro" method="post">
+            <div class="formulario">
+                <p>Nombre: </p><input type="Nombre" name="nombre">
+                <p>Email: </p><input type="email" name="email">
+            </div>
 
-        <div class="nuevo-usuario">
-            <h2>Suscribete para acceder a ofertas exlusivas</h2>
-            <button>
-                <a href="suscripcion.html">Suscribirse</a>
-            </button>
-
-        </div>
-
+            <div class="enviar-borrar">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>                
     </div>
 
-    <script src="registro.js"></script>
+    
 
     <section>
         <%- include('../partials/novedades.ejs') %>
     </section>
 
-    <footer>
+    <!-- <footer>
         <%- include('../partials/footer.ejs') %>
-    </footer>
+    </footer> -->
 </body>
 </html>
