@@ -12,13 +12,21 @@
 }
 
 body{
-  background-color: var(--crema);
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(248,231,249,1) 100%);
   font-family: cursive;
+}
+
+
+.h1Principal{
+  display: none;
 }
 
 
 /* ###################################################### */
 /* CABECERA */
+
+
 
 .cabecera{
   display: flex;
@@ -33,7 +41,7 @@ body{
   display: flex;
   justify-content: start;
   width: 75%;
-  background-color: var(--crema);
+  background: none;
 }
 
 .logo img{
@@ -108,6 +116,29 @@ body{
   text-decoration: none;
 }
 
+
+
+.enlases{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.iconos{
+  max-width: 40px;
+  padding: 3px;
+}
+
+.iconos-ubicacion img:hover{
+  transform: rotate(0.1turn);
+}
+
+
+
+/* ######################   SUB-MENU   ###################### */
+
+
 .navegador-beba:hover >.submenu-beba{
   display: block;
   position: fixed;
@@ -134,21 +165,6 @@ body{
 }
 
 
-.enlases{
-  width: 80%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.iconos{
-  max-width: 40px;
-  padding: 3px;
-}
-
-.iconos-ubicacion img:hover{
-  transform: rotate(0.1turn);
-}
 
 /* ############################################################### */
 /* SLIDER DE IMAGENES */
@@ -220,7 +236,7 @@ footer{
 }
 
 footer h2{
-  font-family: cursive ;
+  font-family: cursive;
   font-size: 125%;
   font-weight: bold;
   color: red;
@@ -441,4 +457,83 @@ footer h2{
 
 .inputPilcha{
   width: 300px;
+}
+
+
+/* ############################### SUSCRIPCION ############################ */
+
+
+
+.suscripcion{
+  padding: 3%;
+  margin: 0 auto;
+  width: 50%;
+  height: 500px;
+  background: url(https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1) ;
+  background-size: 100%;
+  /* box-shadow: 15px 15px 15px 15px 15px white; */
+  border-style:unset;
+}
+
+.imgRegistro{
+  max-width: 100%;
+  opacity: 60%;
+}
+
+.h1Registro{
+  text-align: center;
+}
+
+
+.enviar{
+  height: 50px;
+  margin: 3px;
+  padding: 3%
+
+}
+
+.borrar{
+  height: 50px;
+  margin: 3px;
+  padding: 3%
+}
+
+.enviar:hover{
+  transform: scale(1.05);
+  background-color: rgb(255, 233, 233);
+}
+
+.borrar:hover{
+  transform: scale(1.05);
+  background-color: rgb(255, 233, 233);
+
+}
+
+
+
+
+/* ################################## NOSOTROS ################################# */
+
+
+
+
+.bodyNosotros{
+  background-color: rgb(206, 235, 230);;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: tomato;
+}
+.pNosotros{
+  max-width: 50%;
+}
+.h1Nosotros{
+  display: flex;
+  justify-content: center;
+}
+.imgNosotros{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  max-width: 48%;
+  padding: 1%;
 }

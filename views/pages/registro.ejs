@@ -10,17 +10,20 @@
 <body>
     <%- include('../partials/nav.ejs') %>
 
-    <div class="suscripcion">
-        <h1>SUSCRIBITE</h1>
-        <form action="/registro" method="post">
+    <div class="registro">
+        <h1 class="h1Registro">SUSCRIBITE</h1>
+        
+        <!-- <img class="imgRegistro" src="https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1" alt=""> -->
+        
+        <form class="suscripcion" action="/registro" method="post">
             <div class="formulario">
                 <p>Nombre: </p><input type="Nombre" name="nombre">
                 <p>Email: </p><input type="email" name="email">
             </div>
 
             <div class="enviar-borrar">
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar">
+                <input class="enviar" type="submit" value="Enviar">
+                <input class="borrar" type="reset" value="Borrar">
             </div>
         </form>                
     </div>
@@ -30,9 +33,5 @@
     <section>
         <%- include('../partials/novedades.ejs') %>
     </section>
-
-    <!-- <footer>
-        <%- include('../partials/footer.ejs') %>
-    </footer> -->
 </body>
 </html>

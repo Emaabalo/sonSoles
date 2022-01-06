@@ -1,4 +1,5 @@
 var express = require('express');
+const res = require('express/lib/response');
 var router = express.Router();
 
 /*traigo todas las funciones*/
@@ -41,6 +42,11 @@ router.post('/registro', async (req, res) =>{
     await api.addUser(nombre, email);
     // res.send('vas bien');
     // res.render('/registro', {nombre, usuario});
+});
+
+router.get('/nosotros',async(req,res) => {
+    const nosotros = res.render('pages/nosotros');
+    return nosotros;
 });
 
 
