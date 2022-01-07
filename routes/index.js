@@ -37,11 +37,9 @@ router.get('/buscar',async (req, res) => {
     
   });
 
-router.post('/registro', async (req, res) =>{
+router.get('/registro', async (req, res) =>{
     const {nombre, email} = req.body;
     await api.addUser(nombre, email);
-    // res.send('vas bien');
-    // res.render('/registro', {nombre, usuario});
 });
 
 router.get('/nosotros',async(req,res) => {
