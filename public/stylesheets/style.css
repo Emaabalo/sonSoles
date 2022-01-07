@@ -12,8 +12,10 @@
 }
 
 body{
+  /* background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(248,231,249,1) 100%); */
   background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(248,231,249,1) 100%);
+background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1) 100%);
   font-family: cursive;
 }
 
@@ -518,7 +520,7 @@ footer h2{
 
 
 .bodyNosotros{
-  background-color: rgb(206, 235, 230);;
+  background-color: rgb(56, 56, 56);
   font-weight: bold;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: tomato;
