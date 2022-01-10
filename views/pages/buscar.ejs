@@ -4,12 +4,19 @@
 <head>
   <title>Son Soles</title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link  rel="icon"   href="https://raw.githubusercontent.com/Emaabalo/sonSoles/main/public/images/sol.png" type="image/png" />
+
 </head>
 
 <body>
+  
   <header>
-    <%- include('../partials/nav.ejs') %>
+    <h1 class="h1Principal">busquedas</h1>
+    <nav>
+      <%- include('../partials/nav.ejs') %>    
+    </nav>
   </header>
+
 
   <main>
     <%- include('../partials/filtros.ejs') %>
@@ -28,11 +35,14 @@
     </div>
 
     <%- include('../partials/vidriera.ejs') %>
+
   </main>
+
 
   <section>
     <%- include('../partials/novedades.ejs') %>
   </section>
+
 
   <footer>
     <%- include('../partials/footer.ejs') %>

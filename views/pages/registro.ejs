@@ -4,34 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="icon"   href="https://raw.githubusercontent.com/Emaabalo/sonSoles/main/public/images/sol.png" type="image/png" />
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Registro</title>
 </head>
 <body>
-    <%- include('../partials/nav.ejs') %>
 
-    <div class="registro">
+    <header>
         <h1 class="h1Registro">SUSCRIBITE</h1>
-        
-        <!-- <img class="imgRegistro" src="https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1" alt=""> -->
-        
-        <form class="suscripcion" action="/registro" method="get">
-            <div class="formulario">
-                <p>Nombre: </p><input type="Nombre" name="nombre">
-                <p>Email: </p><input type="email" name="email">
-            </div>
+    </header>    
 
-            <div class="enviar-borrar">
-                <input class="enviar" type="submit" value="Enviar">
-                <input class="borrar" type="reset" value="Borrar">
-            </div>
-        </form>                
-    </div>
+    <nav>
+        <%- include('../partials/nav.ejs') %>
+    </nav>
 
+    <main>
+        <div class="registroBoton">
+            
+            <!-- <img class="imgRegistro" src="https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1" alt=""> -->
+            
+            <form class="suscripcion" action="/registro" method="get">
+                <div class="formulario">
+                    <p>Nombre: </p><input type="Nombre" name="nombre">
+                    <p>Email: </p><input type="email" name="email">
+                </div>
+    
+                <div class="enviar-borrar">
+                    <input class="enviar" type="submit" value="Enviar">
+                    <input class="borrar" type="reset" value="Borrar">
+                </div>
+            </form>                
+        </div>
+
+        <picture>
+            <div class="imgNiños">
+                <img class="niñosMirando" src="https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1" alt="">
+            </div>
+        </picture>
+
+    </main>
     
 
     <section>
         <%- include('../partials/novedades.ejs') %>
     </section>
+
+    
 </body>
 </html>

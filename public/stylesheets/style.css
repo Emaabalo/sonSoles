@@ -239,11 +239,11 @@ footer{
 
 footer h2{
   font-family: cursive;
-  font-size: 125%;
+  font-size: 100%;
   font-weight: bold;
   color: red;
   text-align: center;
-  padding-bottom: 4%;
+  padding-bottom: 2%;
 }
 
 .pieses{
@@ -252,7 +252,7 @@ footer h2{
   background-image: url(https://raw.githubusercontent.com/Emaabalo/sonSoles/main/public/images/ni%C3%B1a-detras.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  padding: 3%;
+  padding-bottom: 6%;
   font-weight: bold;
 }
 
@@ -277,14 +277,13 @@ footer h2{
   grid-template-columns: repeat(2,1fr);
 }
 
-.enviar-borrar input{
-  /* display: flex; */
-  width: 48%;
-  border: 1px solid gray;
+.boton-menu{
+  display: flex; 
+  width: 100%;
+  /* border: 1px solid gray; */
   background-color: transparent;
   cursor: pointer;
-  font-weight: bold;
-  
+  font-weight: bold;  
 }
 
 
@@ -309,6 +308,13 @@ footer h2{
 /* ######################################################### */
 /* MEDIAS */
 
+@media (max-width: 1050px){
+  .registro{
+    display: none;
+  }
+  
+}
+
 @media (max-width: 750px){    
   .botones{
       display: flex;
@@ -327,9 +333,14 @@ footer h2{
       justify-content: flex-start;
       height: 100%;
   }   
+
+  .prendasTodas{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
 }
 
-@media (max-width: 500px){    
+/* @media (max-width: 500px){    
   .menu{
       display: flex;
       flex-direction: column;
@@ -340,39 +351,61 @@ footer h2{
       padding-bottom: 5%;
   }
 
-  .logo img{
-      display: flex;
-      justify-content: center;
-      width: 100%;        
-  }
-}
-@media (max-width: 500px){
+  
+} */
+
+
+@media (max-width: 750px){
   .cabecera{
       display: flex;
       flex-direction: column;
   }
   
 
-  .escondido{
+
+  .enlases{
       display: block;
-      text-align: center;
+      margin: auto;      
+  }
+
+  .iconos-ubicacion{
+    
+    display: flex;
+    justify-content: space-around;
   }
 
   .escondido img{
       width: 12%;
   }
+
+  .prendasTodas{
+    border: none;
+  }
  
   footer{
       font-size: 70%;
   }
+
   .botones-footer{
       font-size: 70%;
+      margin: auto;
   }
+
+  .logo{
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex: 1; order: 1;
+  }
+
+  .logo a{
+    margin: auto;
+  }
+
   .botones{
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      padding-left: 10px;
-      padding-right: 10px;     
+      grid-template-columns: repeat(4,1fr);
+      padding: 10px;       
   }
   
   .boton-menu{
@@ -380,10 +413,27 @@ footer h2{
       justify-content: center;
       align-items: center;
   }   
+
   
-  .pieses{
-      flex-direction: column;
-      justify-content: center;
+  /* .pieses{
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5%;      
+  } */
+
+  .prendasTodas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+  }
+
+  .registroBoton, .suscripcion{
+    width: 100%;
+  }
+
+  .formulario{
+    width: 100%;
   }
 }
 
@@ -420,7 +470,8 @@ footer h2{
 }
 
 .imagen:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
+  box-shadow: none;
 }
 
 .precio {
@@ -434,16 +485,12 @@ footer h2{
 /* ##########################   FORMULARIO PARA BUSCAR   #################### */
 
 .formBuscar{
-  padding: 5px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  margin-right: 50px;
+  
+  padding-right: 10px;
   margin: 1% auto;
   display: flex;
   text-align: center;
-
-  justify-content: end;
-  background-color: rgb(203, 250, 128);
+  justify-content: end; 
 }
 
 .botonBuscar{
@@ -464,17 +511,34 @@ footer h2{
 
 /* ############################### SUSCRIPCION ############################ */
 
+.h1Registro{
+  display: none;
+}
+
+.registroBoton{
+  height: 100%;
+  text-align: center;
+}
 
 
 .suscripcion{
   padding: 3%;
   margin: 0 auto;
   width: 50%;
-  height: 500px;
-  background: url(https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1) ;
-  background-size: 100%;
+  /* height: 500px; */
+  /* background-image: url(https://previews.123rf.com/images/gelpi/gelpi1705/gelpi170500480/78843917-.jpg?fj=1) ; */
+  /* background-size: 100%; */
+  /* background-repeat: no-repeat; */
   /* box-shadow: 15px 15px 15px 15px 15px white; */
-  border-style:unset;
+  /* border-style:unset; */
+}
+
+.imgNiños{
+  text-align: center;
+}
+
+.niñosMirando{
+  width: 50%;
 }
 
 .imgRegistro{
@@ -486,8 +550,16 @@ footer h2{
   text-align: center;
 }
 
+.enviar-borrar{
+  display: flex;
+}
+
 
 .enviar{
+  background: none;
+  font-weight: bold;
+  color: green;
+  width: 50%;
   height: 50px;
   margin: 3px;
   padding: 3%
@@ -495,6 +567,11 @@ footer h2{
 }
 
 .borrar{
+  background: none;
+  font-weight: bold;
+
+  color: red;
+  width: 50%;
   height: 50px;
   margin: 3px;
   padding: 3%

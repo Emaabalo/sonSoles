@@ -28,7 +28,6 @@ const addUser = async (nombre, email) => {
 };      
 
 // const getUsuarios = async(email) => {
-//     // llamo a la DB
 //     const usuarios = await db.usuarios.findAll().then(result => {
 //         return result;
 //     });
@@ -37,5 +36,5 @@ const addUser = async (nombre, email) => {
 
 module.exports = {    
     searchByFiltro,
-    addUser,
+    addUser
 };
