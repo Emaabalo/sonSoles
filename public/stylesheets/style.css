@@ -19,16 +19,12 @@ background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1)
   font-family: cursive;
 }
 
-
 .h1Principal{
   display: none;
 }
 
-
 /* ###################################################### */
 /* CABECERA */
-
-
 
 .cabecera{
   display: flex;
@@ -78,9 +74,9 @@ background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1)
   text-align: center;
   padding: 4%;
   list-style: none;
-  width: 100%;
-  
+  width: 100%;  
 }
+
 .submenu-bebe{
   display: none;
   background-color: white;
@@ -90,8 +86,8 @@ background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1)
   padding: 4%;
   list-style: none;
   width: 100%;
-
 }
+
 .submenu-nino{
   display: none;
   background-color: white;
@@ -101,8 +97,8 @@ background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1)
   padding: 4%;
   list-style: none;
   width: 100%;
-
 }
+
 .submenu-nina{
   display: none;
   background-color: white;
@@ -112,13 +108,11 @@ background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1)
   padding: 4%;
   list-style: none;
   width: 100%;
-
 }
+
 .detalle a{
   text-decoration: none;
 }
-
-
 
 .enlases{
   width: 80%;
@@ -135,7 +129,6 @@ background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(250,158,255,1)
 .iconos-ubicacion img:hover{
   transform: rotate(0.1turn);
 }
-
 
 
 /* ######################   SUB-MENU   ###################### */
@@ -593,26 +586,38 @@ footer h2{
 
 /* ################################## NOSOTROS ################################# */
 
-
-
-
 .bodyNosotros{
-  background-color: rgb(56, 56, 56);
   font-weight: bold;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: tomato;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(157, 71, 255);
 }
+
 .pNosotros{
-  max-width: 50%;
+  max-width: 60%;
+  margin: auto;
 }
+
+.comienzos, .recorrido, .vision{
+  margin: 5%;
+}
+
 .h1Nosotros{
   display: flex;
   justify-content: center;
+  padding-bottom: 1%;
 }
+
 .imgNosotros{
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  max-width: 48%;
-  padding: 1%;
+  mix-blend-mode: multiply;
+  max-width: 80%;  
 }
+
+.imgLocal{
+  text-align: center;
+  position: sticky;
+}
+
+/* #map {
+  height: 400px;
+  width: 100%;
+} */
